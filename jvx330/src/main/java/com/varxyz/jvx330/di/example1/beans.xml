@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<!-- 빈으로 등록했으니 컨테이너에게 요청할때마다 객체를 만들어달라는 문법 -->
+	<bean name="foo" class="com.varxyz.jvx330.di.example1.Foo">
+		<constructor-arg ref="bar"/>
+	</bean>
+	
+	<!-- <constructor-arg> 태그 정의가 없다면 아규먼트가 없는 생성자를 이용한다. -->
+	<bean name="foo2" class="com.varxyz.jvx330.di.example1.Foo">
+		<property name="bar" ref="bar"/>
+	</bean>
+	
+	<bean name="bar" class="com.varxyz.jvx330.di.example1.Bar"/>
+</beans>
