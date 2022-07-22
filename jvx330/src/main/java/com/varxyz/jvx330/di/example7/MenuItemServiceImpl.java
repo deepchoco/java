@@ -11,6 +11,11 @@ public class MenuItemServiceImpl implements MenuItemService {
 	@Autowired
 	private MenuItemDao itemDao;
 	
+//	autowire를 사용하면 위코드처럼 코드량을 줄일수있다 하지만 밑의 쓰지않는 코드에 써놔도 문제가 없음
+//	public void setItemDao(MenuItemDao itemDao) {
+//		this.itemDao = itemDao
+//	}
+	
 	@Override
 	public void addMenuItem(MenuItem item) {
 		itemDao.save(item);
