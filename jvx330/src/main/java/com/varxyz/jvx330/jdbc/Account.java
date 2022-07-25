@@ -11,20 +11,16 @@ import lombok.ToString;
 @Setter
 @AllArgsConstructor
 @ToString
-public class Customer {
-	private long cid;
-	private String email;
-	private String passwd;
-	private String name;
-	private String ssn;
-	private String phone;
+public class Account {
+	private long aid;
+	private Customer customer;
+	private String accountNum;
+	private char accType;
+	private double balance;
 	private Date regDate;
 	
-	public Customer() {
+	public Account() {
 		
 	}
-	
-	public Customer(long cid) {
-		
-	}
+
 }

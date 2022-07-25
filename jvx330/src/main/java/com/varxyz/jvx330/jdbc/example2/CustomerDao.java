@@ -25,7 +25,7 @@ public class CustomerDao {
 		return jdbcTemplate.query(sql, new RowMapper<Customer>() {
 
 			@Override
-			public Customer mapRow(ResultSet rs, int rowNum) throws SQLException {
+			public Customer mapRow(ResultSet rs, int rowNum) throws SQLException {//받은 처리결과를 어떤식으로 매핑할것인가
 				Customer customer = new Customer(rs.getLong("cid"),
 						rs.getString("email"), rs.getString("passwd"),
 						rs.getString("name"), rs.getString("ssn"),
